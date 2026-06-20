@@ -1,9 +1,13 @@
 import { readFile } from "node:fs/promises";
 
-const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "llms.txt", "pricing.md"];
+const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "llms.txt", "pricing.md", "robots.txt", "sitemap.xml", "favicon.svg"];
 const contents = Object.fromEntries(
   await Promise.all(files.map(async (file) => [file, await readFile(file, "utf8")]))
 );
+
+const jsonLdMatch = contents["index.html"].match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+const jsonLd = jsonLdMatch ? JSON.parse(jsonLdMatch[1]) : null;
+const graphTypes = jsonLd?.["@graph"]?.map((item) => item["@type"]) ?? [];
 
 const checks = [
   ["homepage has one H1", (contents["index.html"].match(/<h1[ >]/g) || []).length === 1],
@@ -12,8 +16,14 @@ const checks = [
   ["homepage links draft guidance", contents["index.html"].includes("gib.gov.tr")],
   ["living guide is the primary offer", contents["index.html"].includes("Founding price") && contents["index.html"].includes("&euro;89")],
   ["homepage has FAQ structured data", contents["index.html"].includes('"@type": "FAQPage"')],
+  ["JSON-LD parses and identifies the site", graphTypes.includes("Organization") && graphTypes.includes("WebSite") && graphTypes.includes("WebPage") && graphTypes.includes("FAQPage")],
   ["LLM context links primary sources", contents["llms.txt"].includes("Official Gazette") && contents["llms.txt"].includes("draft Communique No. 333")],
+  ["LLM context links machine-readable resources", contents["llms.txt"].includes("sitemap.xml") && contents["llms.txt"].includes("robots.txt")],
   ["machine-readable pricing is present", contents["pricing.md"].includes("EUR 89")],
+  ["canonical matches the live GitHub Pages site", contents["index.html"].includes('<link rel="canonical" href="https://mikhail1250.github.io/TND/">')],
+  ["sitemap uses the live canonical host", contents["sitemap.xml"].includes("https://mikhail1250.github.io/TND/")],
+  ["AI crawlers are explicitly allowed", ["GPTBot", "PerplexityBot", "ClaudeBot", "Google-Extended", "Bingbot"].every((bot) => contents["robots.txt"].includes(`User-agent: ${bot}`))],
+  ["brand uses the Article 20/D monogram", contents["index.html"].includes("<span>20</span><b>/D</b>") && !contents["favicon.svg"].includes("<circle")],
   ["checker has four questions", (contents["index.html"].match(/data-question=/g) || []).length === 4],
   ["checker script is present", contents["script.js"].includes("eligibility-checker")],
   ["mobile breakpoint is present", contents["styles.css"].includes("@media (max-width: 760px)")],

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#132a2b"/>
-  <circle cx="31" cy="32" r="17" fill="#bf3b35"/>
-  <circle cx="25" cy="28" r="12" fill="#f4f0e7"/>
-  <circle cx="31" cy="28" r="11" fill="#bf3b35"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Article 20/D monogram">
+  <rect width="64" height="64" rx="12" fill="#193634"/>
+  <rect x="7" y="51" width="50" height="4" rx="2" fill="#b58c55"/>
+  <text x="8" y="40" fill="#fffdf8" font-family="Arial, sans-serif" font-size="26" font-weight="700">20</text>
+  <text x="37" y="40" fill="#b58c55" font-family="Arial, sans-serif" font-size="16" font-weight="700">/D</text>
 </svg>

@@ -1,4 +1,4 @@
-# Turkey Non-Dom
+# Turkiye Non-Dom
 
 > Independent English-language information about Turkey's 20-year exemption for qualifying foreign-source income under repeated Article 20/D of the Turkish Income Tax Law.
 
@@ -13,10 +13,15 @@ Turkey Non-Dom is a market description, not the official legal name of the regim
 
 ## Key pages
 
-- [Main guide and eligibility screen](https://turkeynondom.com/)
-- [Editorial methodology](https://turkeynondom.com/methodology.html)
-- [Privacy](https://turkeynondom.com/privacy.html)
-- [Guide pricing](https://turkeynondom.com/pricing.md)
+- [Main guide and eligibility screen](https://mikhail1250.github.io/TND/)
+- [Editorial methodology](https://mikhail1250.github.io/TND/methodology.html)
+- [Privacy](https://mikhail1250.github.io/TND/privacy.html)
+- [Guide pricing](https://mikhail1250.github.io/TND/pricing.md)
+
+## Machine-readable resources
+
+- [XML sitemap](https://mikhail1250.github.io/TND/sitemap.xml)
+- [Crawler policy](https://mikhail1250.github.io/TND/robots.txt)
 
 ## Primary sources
 
