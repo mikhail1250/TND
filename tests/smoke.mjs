@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "llms.txt", "pricing.md", "robots.txt", "sitemap.xml", "favicon.svg"];
+const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "updates.html", "llms.txt", "pricing.md", "robots.txt", "sitemap.xml", "favicon.svg"];
 const contents = Object.fromEntries(
   await Promise.all(files.map(async (file) => [file, await readFile(file, "utf8")]))
 );
@@ -14,7 +14,7 @@ const checks = [
   ["homepage identifies draft status", contents["index.html"].includes("remains in draft")],
   ["homepage links official law", contents["index.html"].includes("resmigazete.gov.tr")],
   ["homepage links draft guidance", contents["index.html"].includes("gib.gov.tr")],
-  ["living guide is the primary offer", contents["index.html"].includes("Founding price") && contents["index.html"].includes("&euro;89")],
+  ["living guide is the primary offer", contents["index.html"].includes("Introductory price") && contents["index.html"].includes("&euro;89")],
   ["homepage has FAQ structured data", contents["index.html"].includes('"@type": "FAQPage"')],
   ["JSON-LD parses and identifies the site", graphTypes.includes("Organization") && graphTypes.includes("WebSite") && graphTypes.includes("WebPage") && graphTypes.includes("FAQPage")],
   ["LLM context links primary sources", contents["llms.txt"].includes("Official Gazette") && contents["llms.txt"].includes("draft Communique No. 333")],
@@ -24,6 +24,9 @@ const checks = [
   ["sitemap uses the live canonical host", contents["sitemap.xml"].includes("https://mikhail1250.github.io/TND/")],
   ["AI crawlers are explicitly allowed", ["GPTBot", "PerplexityBot", "ClaudeBot", "Google-Extended", "Bingbot"].every((bot) => contents["robots.txt"].includes(`User-agent: ${bot}`))],
   ["brand uses the Article 20/D monogram", contents["index.html"].includes("<span>20</span><b>/D</b>") && !contents["favicon.svg"].includes("<circle")],
+  ["updates page has dated source-based entries", contents["updates.html"].includes('id="2026-06-20"') && contents["updates.html"].includes('id="2026-06-04"') && contents["updates.html"].includes("resmigazete.gov.tr") && contents["updates.html"].includes("gib.gov.tr")],
+  ["updates page has collection structured data", contents["updates.html"].includes('"@type": "CollectionPage"') && contents["updates.html"].includes('"@type": "ItemList"')],
+  ["guide uses publication language", contents["index.html"].includes("Introductory price") && contents["index.html"].includes("Get publication notice") && !/founding|reserve/i.test(contents["index.html"])],
   ["checker has four questions", (contents["index.html"].match(/data-question=/g) || []).length === 4],
   ["checker script is present", contents["script.js"].includes("eligibility-checker")],
   ["mobile breakpoint is present", contents["styles.css"].includes("@media (max-width: 760px)")],

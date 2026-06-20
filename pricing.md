@@ -2,10 +2,10 @@
 
 Last updated: 20 June 2026
 
-## Founding Edition
+## First Edition
 
-- Planned price: EUR 89, one-time payment
-- Availability: In preparation; no payment is currently taken
+- Planned introductory price: EUR 89, one-time payment
+- Availability: In preparation; publication notifications are available and no payment is currently taken
 - Update period: 12 months from delivery
 - Format: Downloadable English-language guide with emailed material-update notices
 
@@ -25,6 +25,6 @@ Last updated: 20 June 2026
 - Representation before a Turkish authority
 - Preparation or filing of an application
 
-The final scope may change before launch. Founding-list members will receive the delivery terms before payment.
+The final scope may change before publication. People on the notification list will receive the publication notice and final delivery terms before deciding whether to buy.
 
-[Join the founding list](mailto:hello@turkeynondom.com?subject=Reserve%20the%20Turkey%20Non-Dom%20Living%20Guide)
+[Get the publication notice](mailto:hello@turkeynondom.com?subject=Notify%20me%20when%20the%20Turkey%20Non-Dom%20Living%20Guide%20is%20published)
