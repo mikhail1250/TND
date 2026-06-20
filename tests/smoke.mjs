@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html"];
+const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "llms.txt", "pricing.md"];
 const contents = Object.fromEntries(
   await Promise.all(files.map(async (file) => [file, await readFile(file, "utf8")]))
 );
@@ -10,6 +10,10 @@ const checks = [
   ["homepage identifies draft status", contents["index.html"].includes("remains in draft")],
   ["homepage links official law", contents["index.html"].includes("resmigazete.gov.tr")],
   ["homepage links draft guidance", contents["index.html"].includes("gib.gov.tr")],
+  ["living guide is the primary offer", contents["index.html"].includes("Founding price") && contents["index.html"].includes("&euro;89")],
+  ["homepage has FAQ structured data", contents["index.html"].includes('"@type": "FAQPage"')],
+  ["LLM context links primary sources", contents["llms.txt"].includes("Official Gazette") && contents["llms.txt"].includes("draft Communique No. 333")],
+  ["machine-readable pricing is present", contents["pricing.md"].includes("EUR 89")],
   ["checker has four questions", (contents["index.html"].match(/data-question=/g) || []).length === 4],
   ["checker script is present", contents["script.js"].includes("eligibility-checker")],
   ["mobile breakpoint is present", contents["styles.css"].includes("@media (max-width: 760px)")],

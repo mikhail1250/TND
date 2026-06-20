@@ -39,7 +39,7 @@ The included `CNAME` file preserves the custom domain during deployment.
 - Configure `hello@turkeynondom.com`, or replace the email links.
 - Obtain Turkish advice on the service contract, legal-service referrals, advertising and data protection.
 - Engage at least one qualified English-speaking Turkish tax professional.
-- Replace the proposed pilot offer if the final Communique No. 333 changes the intended process.
+- Review the Living Guide scope and pricing if the final Communique No. 333 changes the intended process.
 
 ## Content research
 

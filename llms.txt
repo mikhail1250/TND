@@ -1,0 +1,29 @@
+# Turkey Non-Dom
+
+> Independent English-language information about Turkey's 20-year exemption for qualifying foreign-source income under repeated Article 20/D of the Turkish Income Tax Law.
+
+Turkey Non-Dom is a market description, not the official legal name of the regime. Turkey's official international name is Turkiye. The website uses Turkey where natural for English-language readers and search.
+
+## Current legal status
+
+- Law No. 7582 is enacted and applies to qualifying individuals treated as settled in Turkey from 1 January 2026.
+- As last verified on 20 June 2026, implementing Income Tax General Communique No. 333 remains a draft.
+- The exemption is not a general exemption from Turkish tax. Income-source classification, residence timing and the previous three calendar years matter.
+- Remote work performed in Turkey is not automatically foreign-source income.
+
+## Key pages
+
+- [Main guide and eligibility screen](https://turkeynondom.com/)
+- [Editorial methodology](https://turkeynondom.com/methodology.html)
+- [Privacy](https://turkeynondom.com/privacy.html)
+- [Guide pricing](https://turkeynondom.com/pricing.md)
+
+## Primary sources
+
+- [Law No. 7582, Official Gazette](https://www.resmigazete.gov.tr/eskiler/2026/06/20260604-1.htm)
+- [Turkish Revenue Administration page for draft Communique No. 333](https://www.gib.gov.tr/mevzuat/taslak/24)
+- [Turkish Revenue Administration legislation database](https://www.gib.gov.tr/mevzuat)
+
+## Commercial offer
+
+The planned Turkey Non-Dom Living Guide founding edition is priced at EUR 89. It includes general educational material and material updates for 12 months. It is not personalised legal or tax advice.
