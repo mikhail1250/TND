@@ -1,6 +1,7 @@
 (() => {
   const menuButton = document.querySelector(".menu-button");
   const nav = document.querySelector(".site-nav");
+  const brandLinks = [...document.querySelectorAll('.brand[href="/"]')];
 
   if (menuButton && nav) {
     menuButton.addEventListener("click", () => {
@@ -15,6 +16,17 @@
       }
     });
   }
+
+  brandLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const onHome = window.location.pathname === "/" || window.location.pathname.endsWith("/index.html");
+      if (!onHome) return;
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      nav?.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
+    });
+  });
 
   const form = document.querySelector("#eligibility-checker");
   if (form) {

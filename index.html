@@ -82,7 +82,7 @@
 
   <header class="site-header" id="top">
     <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="T&uuml;rkiye Non-Dom home">
+      <a class="brand" href="/" aria-label="T&uuml;rkiye Non-Dom home">
         <span class="brand-mark" aria-hidden="true"><span>20</span><b>/D</b></span>
         <span>T&uuml;rkiye <strong>Non-Dom</strong></span>
       </a>
@@ -356,9 +356,17 @@
             <li>Evidence checklist, application timeline and practical examples</li>
             <li>Material updates and a dated change log for 12 months</li>
           </ul>
-          <div class="price-line">
+          <div class="price-line" id="guide-signup">
             <div><span>Expected launch price</span><strong>&euro;89</strong></div>
-            <a class="button button-primary" href="mailto:hello@turkeynondom.com?subject=Join%20the%20Turkey%20Non-Dom%20guide%20publication%20list">Join the publication list</a>
+            <form class="signup-form" action="https://formsubmit.co/hello@turkeynondom.com" method="post">
+              <input type="hidden" name="_subject" value="Turkey Non-Dom publication list signup">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://turkeynondom.com/thank-you.html">
+              <input type="hidden" name="list" value="guide-publication-list">
+              <label class="sr-only" for="guide-email">Email address</label>
+              <input id="guide-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+              <button class="button button-primary" type="submit">Join the publication list</button>
+            </form>
           </div>
           <p class="fine-print">No payment is requested before publication. The list is for the final Communique No. 333 update, the guide release notice and final delivery terms. The guide is general information, not a personal tax opinion. Personal reviews are planned after final implementing rules are published.</p>
         </div>
@@ -455,7 +463,7 @@
         <p class="eyebrow eyebrow-light">The first edition</p>
         <h2>Join the list for the final rules update and guide release.</h2>
         <p>Receive notice when final implementing rules are published and when the first guide edition is ready. No payment is requested now.</p>
-        <a class="button button-light" href="mailto:hello@turkeynondom.com?subject=Join%20the%20Turkey%20Non-Dom%20guide%20publication%20list">Join the publication list</a>
+        <a class="button button-light" href="#guide-signup">Join the publication list</a>
       </div>
     </section>
   </main>
@@ -463,7 +471,7 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <a class="brand brand-footer" href="#top">
+        <a class="brand brand-footer" href="/">
           <span class="brand-mark" aria-hidden="true"><span>20</span><b>/D</b></span>
           <span>T&uuml;rkiye <strong>Non-Dom</strong></span>
         </a>

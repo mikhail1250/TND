@@ -27,4 +27,4 @@ Last updated: 26 June 2026
 
 The final scope may change before publication. People on the publication list will receive the final Communique No. 333 update, the release notice and final delivery terms before deciding whether to buy.
 
-[Join the publication list](mailto:hello@turkeynondom.com?subject=Join%20the%20Turkey%20Non-Dom%20guide%20publication%20list)
+[Join the publication list](https://turkeynondom.com/#guide-signup)

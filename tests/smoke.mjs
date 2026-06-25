@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "updates.html", "llms.txt", "pricing.md", "robots.txt", "sitemap.xml", "favicon.svg"];
+const files = ["index.html", "styles.css", "script.js", "methodology.html", "privacy.html", "404.html", "updates.html", "llms.txt", "pricing.md", "robots.txt", "sitemap.xml", "favicon.svg", "thank-you.html"];
 const contents = Object.fromEntries(
   await Promise.all(files.map(async (file) => [file, await readFile(file, "utf8")]))
 );
@@ -31,6 +31,9 @@ const checks = [
   ["checker script is present", contents["script.js"].includes("eligibility-checker")],
   ["mobile breakpoint is present", contents["styles.css"].includes("@media (max-width: 760px)")],
   ["privacy explains local checker", contents["privacy.html"].includes("runs in your browser")],
+  ["privacy explains the publication form", contents["privacy.html"].includes("FormSubmit") && contents["privacy.html"].includes("publication list")],
+  ["thank-you page exists", contents["thank-you.html"].includes("Thank you.") && contents["thank-you.html"].includes("publication list")],
+  ["homepage has a real signup form", contents["index.html"].includes('class="signup-form"') && contents["index.html"].includes('action="https://formsubmit.co/hello@turkeynondom.com"')],
   ["methodology separates authority levels", contents["methodology.html"].includes("Four levels of authority")]
 ];
 

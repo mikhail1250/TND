@@ -435,6 +435,26 @@ button { color: inherit; }
 .price-line div { display: flex; flex-direction: column; }
 .price-line span { color: var(--ink-soft); font-size: 11px; text-transform: uppercase; }
 .price-line strong { font: 400 38px var(--serif); }
+.signup-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.signup-form input[type="email"] {
+  min-width: 240px;
+  min-height: 50px;
+  padding: 13px 16px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.signup-form input[type="email"]:focus {
+  outline: 2px solid rgba(180, 87, 63, 0.25);
+  border-color: var(--red);
+}
 .fine-print { margin: 24px 0 0; color: var(--ink-soft); font-size: 11px; }
 
 .sources-section { background: var(--paper); }
@@ -593,6 +613,9 @@ button { color: inherit; }
   .timeline p { grid-column: 2; }
   .deliverables { padding: 28px 22px; }
   .price-line { align-items: stretch; flex-direction: column; }
+  .signup-form { justify-content: stretch; }
+  .signup-form input[type="email"] { min-width: 0; width: 100%; }
+  .signup-form .button { width: 100%; }
   .source-list a { grid-template-columns: 1fr; gap: 4px; }
   .source-list small { grid-column: 1; }
   .update-entry { grid-template-columns: 1fr; gap: 14px; }
