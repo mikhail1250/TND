@@ -100,6 +100,61 @@
     });
   }
 
+  const savingsTool = document.querySelector("#tax-savings-tool");
+  const taxResult = document.querySelector("#tax-result");
+  if (savingsTool && taxResult) {
+    const calculateTaxExposure = () => {
+      const data = Object.fromEntries(new FormData(savingsTool).entries());
+      const income = Math.max(0, Number(data.income) || 0);
+      const growth = Math.max(0, Number(data.growth) || 0) / 100;
+      const rate = Math.max(0, Number(data.rate) || 0) / 100;
+      const currency = data.currency || "EUR";
+      let total = 0;
+
+      for (let yearIndex = 0; yearIndex < 20; yearIndex += 1) {
+        total += income * ((1 + growth) ** yearIndex) * rate;
+      }
+
+      taxResult.textContent = new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency,
+        maximumFractionDigits: 0
+      }).format(total);
+    };
+
+    savingsTool.addEventListener("input", calculateTaxExposure);
+    savingsTool.addEventListener("change", calculateTaxExposure);
+    calculateTaxExposure();
+  }
+
+  const deadlineTool = document.querySelector("#deadline-tool");
+  const deadlineResult = document.querySelector("#deadline-result");
+  const deadlineNote = document.querySelector("#deadline-note");
+  if (deadlineTool && deadlineResult && deadlineNote) {
+    const renderDeadline = () => {
+      const data = Object.fromEntries(new FormData(deadlineTool).entries());
+      const yearValue = Number(data.year) || 2026;
+      const monthValue = Number(data.month) || 1;
+      const deadlineYear = monthValue >= 11 ? yearValue + 1 : yearValue;
+      const deadlineText = monthValue >= 11 ? `28 February ${deadlineYear}` : `31 December ${deadlineYear}`;
+
+      let note = "Start with residence evidence, prior tax-residence proof and an income-source map.";
+      if (data.history === "limited") {
+        note = "Limited Turkish investment or property income may not block the exemption, but it should be documented carefully.";
+      } else if (data.history === "yes") {
+        note = "A prior Turkish tax liability may be a blocking issue. Treat this as a professional-review case.";
+      } else if (data.history === "unsure") {
+        note = "First task: reconstruct the previous three calendar years before relying on the exemption.";
+      }
+
+      deadlineResult.textContent = deadlineText;
+      deadlineNote.textContent = note;
+    };
+
+    deadlineTool.addEventListener("change", renderDeadline);
+    renderDeadline();
+  }
+
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();

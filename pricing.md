@@ -7,7 +7,7 @@ Last updated: 26 June 2026
 - Expected launch price: EUR 89, one-time payment
 - Availability: In preparation; the publication list is open and no payment is currently taken
 - Update period: 12 months from delivery
-- Format: Downloadable English-language guide with emailed material-update notices
+- Format: Downloadable English-language self-preparation guide with emailed material-update notices
 
 ### Included
 
@@ -15,7 +15,9 @@ Last updated: 26 June 2026
 - Eligibility map and three-calendar-year history worksheet
 - Income-source risk guide, including remote work and foreign companies
 - Evidence checklist and intended application timeline
-- Practical examples and questions to take to a qualified Turkish professional
+- Practical scenarios for UK non-doms, returning Turkish citizens, investors, founders and crypto/digital-asset holders
+- Asset regularisation and 1% inheritance-tax planning notes linked to Law No. 7582
+- Questions to take to a qualified Turkish professional before paying for a personal review
 - Material updates and dated change log for 12 months
 
 ### Not included

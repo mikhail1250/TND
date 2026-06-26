@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Turkey Non-Dom 2026 | 20-Year Foreign Income Guide</title>
-  <meta name="description" content="A source-based English guide to Turkey's 20-year foreign-income exemption: eligibility, draft application rules, income-source risks and updates.">
+  <title>Turkey Non-Dom 2026 | 20-Year Foreign Income Planning Guide</title>
+  <meta name="description" content="Estimate Turkey's 20-year foreign-income exemption, application deadlines, income-source risks, 1% inheritance rule and asset regularisation options.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#193634">
   <meta property="og:type" content="website">
@@ -43,7 +43,7 @@
         "name": "Turkey Non-Dom Guide: 20-Year Foreign Income Exemption",
         "description": "A source-based English guide to Turkey's 20-year foreign-income exemption.",
         "datePublished": "2026-06-20",
-        "dateModified": "2026-06-26",
+        "dateModified": "2026-06-27",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://turkeynondom.com/#website" }
       },
@@ -69,7 +69,17 @@
           {
             "@type": "Question",
             "name": "What does the Turkey Non-Dom Living Guide include?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The first edition includes a plain-English analysis of the law and draft procedure, an eligibility map, income-source risk notes, an evidence checklist, practical examples and material updates for 12 months. The expected launch price is 89 euros, and people can now join the publication list without payment." }
+            "acceptedAnswer": { "@type": "Answer", "text": "The first edition includes a practical self-preparation pack: plain-English analysis of the law and draft procedure, eligibility and deadline maps, income-source risk notes, worked scenarios, an evidence checklist, asset regularisation notes, questions for advisers and material updates for 12 months. The expected launch price is 89 euros, and people can now join the publication list without payment." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Turkey Non-Dom guide a substitute for a Turkish tax adviser?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. It is designed to help readers organise facts, identify issues and prepare sharper questions before seeking personalised Turkish legal or tax advice." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does asset regularisation matter for Turkey Non-Dom planning?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Some people considering Article 20/D are also deciding whether to bring existing foreign assets into Turkey. The asset regularisation rules are separate from the income-tax exemption, but the planning timeline can overlap." }
           }
         ]
       }
@@ -91,10 +101,10 @@
         <span class="sr-only">Open menu</span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#planning-tools">Tools</a>
         <a href="#regime">The regime</a>
         <a href="#eligibility">Eligibility</a>
-        <a href="#income">Income types</a>
-        <a href="#process">Application</a>
+        <a href="#scenarios">Scenarios</a>
         <a href="updates.html">Updates</a>
         <a class="nav-cta" href="#guide">Join the guide list</a>
       </nav>
@@ -115,10 +125,10 @@
       <div class="shell hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Turkey (T&uuml;rkiye) foreign-income exemption</p>
-          <h1>Turkey's 20-year<br><em>foreign-income exemption.</em><br>Explained and kept current.</h1>
-          <p class="hero-lede">Turkey, officially T&uuml;rkiye, has enacted a 20-year exemption for qualifying foreign-source income of certain new residents. The law is final; implementing Communique No. 333 remains in draft. Our source-based English guide tracks what is settled, what may change and what to prepare.</p>
+          <h1>Turkey Non-Dom<br><em>planning before advice.</em></h1>
+          <p class="hero-lede">Turkey, officially T&uuml;rkiye, has enacted a 20-year exemption for qualifying foreign-source income of certain new residents. Use the calculators, deadlines and scenarios below to see what may matter in your case before you pay for a personal tax review.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#guide">Join the publication list</a>
+            <a class="button button-primary" href="#planning-tools">Estimate my position</a>
             <a class="text-link" href="#eligibility">Check potential eligibility <span aria-hidden="true">&rarr;</span></a>
           </div>
           <p class="hero-note">Independent information and coordination. Not a law or accounting firm.</p>
@@ -153,6 +163,110 @@
         <span>Drafts labelled clearly</span>
         <span>Conflicts disclosed</span>
         <span>Updated when rules change</span>
+      </div>
+    </section>
+
+    <section class="section tools-section" id="planning-tools">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Start with your numbers</p>
+            <h2>What could the Turkey Non-Dom regime mean for you?</h2>
+          </div>
+          <p>The tools below are deliberately conservative. They do not confirm eligibility, but they turn a news headline into a personal planning question: how large is the potential benefit, what deadline applies and what evidence should you start collecting?</p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="interactive-tool tax-tool">
+            <div class="tool-copy">
+              <p class="tool-kicker">20-year estimate</p>
+              <h3>Estimate the Turkish tax potentially avoided on qualifying foreign income.</h3>
+              <p>Enter a rough annual foreign-income figure, an assumed growth rate and an illustrative Turkish tax rate. The result is not tax advice; it is a way to decide whether the question is financially worth preparing properly.</p>
+            </div>
+            <form class="tool-form" id="tax-savings-tool">
+              <label>
+                <span>Annual foreign income</span>
+                <input name="income" type="number" inputmode="decimal" min="0" step="1000" value="250000">
+              </label>
+              <label>
+                <span>Currency</span>
+                <select name="currency">
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="TRY">TRY</option>
+                </select>
+              </label>
+              <label>
+                <span>Annual income growth</span>
+                <input name="growth" type="number" inputmode="decimal" min="0" max="30" step="0.5" value="3">
+              </label>
+              <label>
+                <span>Illustrative tax rate</span>
+                <input name="rate" type="number" inputmode="decimal" min="0" max="45" step="0.5" value="35">
+              </label>
+            </form>
+            <div class="tool-result" aria-live="polite">
+              <span>Illustrative 20-year exposure</span>
+              <strong id="tax-result">0</strong>
+              <p>Shown as ordinary Turkish tax exposure that may be avoided only if the person, income and procedure all qualify.</p>
+            </div>
+          </article>
+
+          <article class="interactive-tool deadline-tool">
+            <div class="tool-copy">
+              <p class="tool-kicker">Deadline & readiness</p>
+              <h3>Find your likely application deadline and first evidence tasks.</h3>
+              <p>Draft Communique No. 333 expects an exemption certificate. Timing matters because a late application can defeat an otherwise good case.</p>
+            </div>
+            <form class="tool-form" id="deadline-tool">
+              <label>
+                <span>Year you become settled in Turkey</span>
+                <select name="year">
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                </select>
+              </label>
+              <label>
+                <span>Month you become settled</span>
+                <select name="month">
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </label>
+              <label>
+                <span>Any Turkish tax liability in the previous 3 calendar years?</span>
+                <select name="history">
+                  <option value="no">No / not aware of any</option>
+                  <option value="limited">Only Turkish rent, investment income or capital gains</option>
+                  <option value="yes">Employment, business or other Turkish tax liability</option>
+                  <option value="unsure">Not sure</option>
+                </select>
+              </label>
+            </form>
+            <div class="tool-result deadline-result" aria-live="polite">
+              <span>Likely filing deadline under the draft</span>
+              <strong id="deadline-result">31 December 2026</strong>
+              <p id="deadline-note">Start with residence evidence, prior tax-residence proof and an income-source map.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="tool-cta">
+          <p>Want the detailed checklist when the first edition is ready?</p>
+          <a class="button button-primary" href="#guide-signup">Send me the checklist and guide notice</a>
+        </div>
       </div>
     </section>
 
@@ -304,6 +418,57 @@
       </div>
     </section>
 
+    <section class="section scenarios-section" id="scenarios">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">People like you</p>
+            <h2>Six scenarios where the headline can hide the real answer.</h2>
+          </div>
+          <p>The guide is being built around fact patterns, not abstract summaries. These examples show why the same 20-year exemption can be simple for one person and risky for another.</p>
+        </div>
+
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <span>01</span>
+            <h3>UK non-dom leaving after the regime change</h3>
+            <p>A portfolio-heavy individual may care less about salary and more about dividends, interest, capital gains and treaty interaction. The first question is whether Turkish residence starts in 2026 and whether the three-year Turkish history test is clean.</p>
+            <strong>Guide focus: investment income map, arrival-year deadline, adviser questions.</strong>
+          </article>
+          <article class="scenario-card">
+            <span>02</span>
+            <h3>Turkish citizen returning from the US or Europe</h3>
+            <p>Nationality is not the central test. Prior Turkish domicile, tax registrations, rental income, securities income and family-property records may matter more than the passport.</p>
+            <strong>Guide focus: three-calendar-year evidence file and Turkish-source exceptions.</strong>
+          </article>
+          <article class="scenario-card">
+            <span>03</span>
+            <h3>Remote founder with foreign clients</h3>
+            <p>A foreign company, foreign invoices and foreign bank account do not automatically make the income foreign-source. Work performed from Turkey and management activity can change the answer.</p>
+            <strong>Guide focus: activity location, company management and source-of-income traps.</strong>
+          </article>
+          <article class="scenario-card">
+            <span>04</span>
+            <h3>Investor with foreign dividends and brokerage gains</h3>
+            <p>This may be the cleanest use case, but the records still need to show where the asset, issuer, account and disposal sit. Foreign taxes paid on exempt income are not credited in Turkey.</p>
+            <strong>Guide focus: asset-by-asset records and exempt/taxable segregation.</strong>
+          </article>
+          <article class="scenario-card">
+            <span>05</span>
+            <h3>Crypto trader or digital-asset holder</h3>
+            <p>The statute is broad, but classification and source questions can be less settled. A cautious person should not assume that exchange location alone answers the tax-source question.</p>
+            <strong>Guide focus: unresolved points, records, and questions for a Turkish adviser.</strong>
+          </article>
+          <article class="scenario-card">
+            <span>06</span>
+            <h3>Family planning inheritance and asset moves</h3>
+            <p>Article 20/D sits beside a 1% inheritance-tax rule and a separate asset regularisation window. The combination may be powerful, but banking, anti-money-laundering and source-country tax issues remain.</p>
+            <strong>Guide focus: 20/D, inheritance and asset regularisation in one planning timeline.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section process-section" id="process">
       <div class="shell">
         <div class="section-heading split-heading">
@@ -339,12 +504,45 @@
       </div>
     </section>
 
+    <section class="section package-section" id="law-7582-package">
+      <div class="shell package-grid">
+        <div class="package-copy">
+          <p class="eyebrow">The larger 7582 window</p>
+          <h2>Why the planning question is bigger than one income-tax article.</h2>
+          <p>Article 20/D is the headline for new residents, but Law No. 7582 also connects to wealth transfer and asset regularisation. For a mobile family, the real question may be how existing capital, future foreign income and succession planning fit together.</p>
+          <p>This is where a guide can be more useful than a short consultation: it can help you build the file, separate questions and arrive at a Turkish adviser with the right facts already organised.</p>
+        </div>
+        <div class="package-stack">
+          <article>
+            <span>Foreign income</span>
+            <h3>20 years</h3>
+            <p>Qualifying foreign-source income and gains may be excluded from Turkish income tax for eligible individuals who satisfy the residence history and procedure.</p>
+          </article>
+          <article>
+            <span>Inheritance</span>
+            <h3>1%</h3>
+            <p>For beneficiaries of the Article 20/D exemption, inheritance transfers occurring within the statutory period are subject to a 1% rate under the enacted amendment.</p>
+          </article>
+          <article>
+            <span>Asset regularisation</span>
+            <h3>0-5%</h3>
+            <p>Separate asset declaration rules can apply to cash, gold, foreign currency, securities and other capital-market instruments, with rates depending on timing and holding commitments.</p>
+          </article>
+          <article>
+            <span>Key date</span>
+            <h3>31 July 2027</h3>
+            <p>The statutory asset declaration window runs to 31 July 2027, with different rate effects for filings made from 1 January 2027. Other-law obligations still apply.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section review-section" id="guide">
       <div class="shell review-grid">
         <div>
           <p class="eyebrow">Turkey Non-Dom Living Guide</p>
-          <h2>What is planned for the Turkey Non-Dom Living Guide?</h2>
-          <p class="review-lede">Go beyond a summary. Follow the law, the draft procedure and the unresolved questions through one source-based English reference.</p>
+          <h2>The self-preparation pack before you pay for advice.</h2>
+          <p class="review-lede">The first edition is designed for people who want more than news but are not ready to spend hundreds or thousands on a personal review before they understand the map.</p>
           <p class="availability"><span></span> Publication list open before final Communique No. 333</p>
         </div>
         <div class="deliverables">
@@ -352,8 +550,11 @@
           <ul>
             <li>Plain-English analysis of Law No. 7582 and draft Communique No. 333</li>
             <li>Eligibility map and three-calendar-year history worksheet</li>
+            <li>Your application deadline logic and evidence file builder</li>
             <li>Income-source risk guide, including remote work and foreign companies</li>
-            <li>Evidence checklist, application timeline and practical examples</li>
+            <li>Worked scenarios for investors, founders, returning Turkish citizens and UK non-doms</li>
+            <li>Asset regularisation and 1% inheritance-tax planning notes</li>
+            <li>Questions to take to a Turkish YMM, SMMM or lawyer before you pay for a review</li>
             <li>Material updates and a dated change log for 12 months</li>
           </ul>
           <div class="price-line" id="guide-signup">
@@ -452,7 +653,15 @@
           </details>
           <details>
             <summary>What will the Living Guide include?</summary>
-            <p>The first edition will include a source-based explanation, eligibility and income-source maps, an evidence checklist, practical examples and material updates for 12 months.</p>
+            <p>The first edition will include a source-based explanation, eligibility and income-source maps, an evidence checklist, worked scenarios, asset regularisation notes, adviser questions and material updates for 12 months.</p>
+          </details>
+          <details>
+            <summary>Is the guide meant to replace a Turkish tax adviser?</summary>
+            <p>No. It is meant to help you prepare before speaking with one: organise facts, spot obvious issues, avoid paying for basic orientation and ask sharper questions when personal advice is needed.</p>
+          </details>
+          <details>
+            <summary>Why does asset regularisation appear on a Turkey Non-Dom site?</summary>
+            <p>Because some people considering Article 20/D are also deciding whether to bring existing assets into Turkey. The asset rules are separate from the income-tax exemption, but the planning timeline can overlap.</p>
           </details>
         </div>
       </div>
@@ -461,8 +670,8 @@
     <section class="closing-cta">
       <div class="shell closing-inner">
         <p class="eyebrow eyebrow-light">The first edition</p>
-        <h2>Join the list for the final rules update and guide release.</h2>
-        <p>Receive notice when final implementing rules are published and when the first guide edition is ready. No payment is requested now.</p>
+        <h2>Get the checklist before the final rules land.</h2>
+        <p>Receive notice when final implementing rules are published, plus the first guide release terms and the self-preparation checklist. No payment is requested now.</p>
         <a class="button button-light" href="#guide-signup">Join the publication list</a>
       </div>
     </section>
@@ -480,7 +689,9 @@
       <div>
         <h3>Explore</h3>
         <a href="#regime">The regime</a>
+        <a href="#planning-tools">Planning tools</a>
         <a href="#eligibility">Eligibility screen</a>
+        <a href="#scenarios">Scenarios</a>
         <a href="#guide">Living guide</a>
         <a href="#process">Application</a>
         <a href="updates.html">Regulatory updates</a>
