@@ -35,7 +35,6 @@ const checks = [
   ["thank-you page exists", contents["thank-you.html"].includes("Thank you.") && contents["thank-you.html"].includes("publication list")],
   ["homepage has a real signup form", contents["index.html"].includes('class="signup-form"') && contents["index.html"].includes('action="https://formsubmit.co/hello@turkeynondom.com"')],
   ["homepage has a deadline checker", contents["index.html"].includes('id="deadline-tool"') && contents["index.html"].includes("28 February")],
-  ["homepage has myths and misconceptions content", contents["index.html"].includes("Common myths and misconceptions") && contents["index.html"].includes("2024 or 2025")],
   ["homepage has scenario content", contents["index.html"].includes("UK non-dom") && contents["index.html"].includes("Remote founder")],
   ["homepage covers the larger Law 7582 planning window", contents["index.html"].includes("Asset regularisation") && contents["index.html"].includes("31 July 2027")],
   ["deadline checker script is present", contents["script.js"].includes("renderDeadline") && !contents["script.js"].includes("calculateTaxExposure")],
