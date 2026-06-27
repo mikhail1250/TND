@@ -34,10 +34,11 @@ const checks = [
   ["privacy explains the publication form", contents["privacy.html"].includes("FormSubmit") && contents["privacy.html"].includes("publication list")],
   ["thank-you page exists", contents["thank-you.html"].includes("Thank you.") && contents["thank-you.html"].includes("publication list")],
   ["homepage has a real signup form", contents["index.html"].includes('class="signup-form"') && contents["index.html"].includes('action="https://formsubmit.co/hello@turkeynondom.com"')],
-  ["homepage has planning tools", contents["index.html"].includes('id="tax-savings-tool"') && contents["index.html"].includes('id="deadline-tool"')],
+  ["homepage has a deadline checker", contents["index.html"].includes('id="deadline-tool"') && contents["index.html"].includes("28 February")],
+  ["homepage has myths and misconceptions content", contents["index.html"].includes("Common myths and misconceptions") && contents["index.html"].includes("2024 or 2025")],
   ["homepage has scenario content", contents["index.html"].includes("UK non-dom") && contents["index.html"].includes("Remote founder")],
   ["homepage covers the larger Law 7582 planning window", contents["index.html"].includes("Asset regularisation") && contents["index.html"].includes("31 July 2027")],
-  ["calculator script is present", contents["script.js"].includes("calculateTaxExposure") && contents["script.js"].includes("renderDeadline")],
+  ["deadline checker script is present", contents["script.js"].includes("renderDeadline") && !contents["script.js"].includes("calculateTaxExposure")],
   ["methodology separates authority levels", contents["methodology.html"].includes("Four levels of authority")]
 ];
 

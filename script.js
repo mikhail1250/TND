@@ -100,33 +100,6 @@
     });
   }
 
-  const savingsTool = document.querySelector("#tax-savings-tool");
-  const taxResult = document.querySelector("#tax-result");
-  if (savingsTool && taxResult) {
-    const calculateTaxExposure = () => {
-      const data = Object.fromEntries(new FormData(savingsTool).entries());
-      const income = Math.max(0, Number(data.income) || 0);
-      const growth = Math.max(0, Number(data.growth) || 0) / 100;
-      const rate = Math.max(0, Number(data.rate) || 0) / 100;
-      const currency = data.currency || "EUR";
-      let total = 0;
-
-      for (let yearIndex = 0; yearIndex < 20; yearIndex += 1) {
-        total += income * ((1 + growth) ** yearIndex) * rate;
-      }
-
-      taxResult.textContent = new Intl.NumberFormat("en-GB", {
-        style: "currency",
-        currency,
-        maximumFractionDigits: 0
-      }).format(total);
-    };
-
-    savingsTool.addEventListener("input", calculateTaxExposure);
-    savingsTool.addEventListener("change", calculateTaxExposure);
-    calculateTaxExposure();
-  }
-
   const deadlineTool = document.querySelector("#deadline-tool");
   const deadlineResult = document.querySelector("#deadline-result");
   const deadlineNote = document.querySelector("#deadline-note");
