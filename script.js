@@ -82,6 +82,7 @@
       progress.style.width = "100%";
       result.hidden = false;
       result.focus?.();
+      window.tndTrack?.("eligibility_check_completed", { result: heading });
     };
 
     questions.forEach((question, index) => {
