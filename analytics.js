@@ -1,5 +1,5 @@
 (() => {
-  const measurementId = "G-1X5ZPN033";
+  const measurementId = "G-W2JYD1Y7SK";
   const consentKey = "tnd-analytics-consent";
   let analyticsLoaded = false;
 
