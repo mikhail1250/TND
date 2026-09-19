@@ -8,7 +8,7 @@
 
   const tag = document.createElement("script");
   tag.async = true;
-  tag.src = "https://mc.yandex.ru/metrika/tag.js";
+  tag.src = `https://mc.yandex.ru/metrika/tag.js?id=${counterId}`;
   document.head.appendChild(tag);
 
   window.ym(counterId, "init", {
